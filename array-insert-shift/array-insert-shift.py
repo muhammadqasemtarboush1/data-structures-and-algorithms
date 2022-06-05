@@ -9,7 +9,7 @@
 #     return arr
 
 # New function without build in len, insert ,append
-def innset_shift_Array(arr, n):
+def array_insert_shift(arr, n):
     arr_lan = 0
     for i in arr:
         arr_lan += 1
@@ -21,7 +21,7 @@ def innset_shift_Array(arr, n):
     return shifted_Array
 
 
-print(innset_shift_Array([2, 4, 9, 6, -8], 5))
+print(array_insert_shift([2, 4, 9, 6, -8], 5))
 
 
 """ 
