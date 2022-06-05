@@ -10,14 +10,14 @@
 
 # New function without build in len, insert ,append
 def array_insert_shift(arr, n):
-    arr_lan = 0
+    arr_len = 0
     for i in arr:
-        arr_lan += 1
-    if(arr_lan % 2 != 0):
-        arr_lan = arr_lan//2 + 1
+        arr_len += 1
+    if(arr_len % 2 != 0):
+        arr_len = arr_len//2 + 1
     else:
-        arr_lan = arr_lan//2
-    shifted_Array = arr[0:arr_lan] + [n] + arr[arr_lan:]
+        arr_len = arr_len//2
+    shifted_Array = arr[0:arr_len] + [n] + arr[arr_len:]
     return shifted_Array
 
 
