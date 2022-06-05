@@ -8,7 +8,6 @@
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
-* I used skip the half of an array then insert
-* I think it's better way to save memory and time.
+* By using for loop to count the len on the array and then check if the len even or odd after that concat the array with the number and return new array
 * Big O time Complexity: O(n)
 * Big O space Complexity: O(1)
