@@ -6,3 +6,4 @@
 |:-------------:|:---------------------------------------------------------------------------------------------------------------------------:|
 |       1       | [Array-reverse](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/array-reverse/README.md) |
 |       2       | [Array-Insert-Shift](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/array-insert-shift/README.md) |
+|       3       | [Array-Insert-Shift](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/array-binary-search/README.md) |
