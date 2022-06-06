@@ -5,10 +5,11 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 ![binary_search](binary_array.jpg)
 
 ## Approach & Efficiency
-    looping all overe
+    looping all overe array but with ignore the half of the elements
+    why : time complexity for itteration is better than recursion
 big O :
 Time complexity  O(log n)
-& space complexity: o(1)
+Space complexity: o(1)
 
 
 1 
