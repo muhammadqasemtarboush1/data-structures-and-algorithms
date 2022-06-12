@@ -31,6 +31,7 @@ def test_insert(ll):
     assert expected == actual
 
 
+
 def test_include(ll):
     """
     Will return true when finding a value within the linked list that exists
@@ -61,6 +62,33 @@ def test_str(ll):
     expected = '{ 0 } ->{ 12 } ->{ 7 } ->{ 5 } -> NULL'
 
     assert actual == expected
+
+def test_insert_multiple(ll):
+    """
+  insert into the linked list
+  The head property will properly point to the first node in the linked list
+    :param ll:
+    :return: None
+    """
+    ll.insert(156)
+    actual = ll.head.value
+    expected = 156
+    assert expected == actual
+    ll.insert(181)
+    actual = ll.head.value
+    expected = 181
+    assert expected == actual
+    ll.insert(109)
+    actual = ll.head.value
+    expected = 109
+    assert expected == actual
+    actual = ll.head.value
+    ll.insert(1875)
+    actual = ll.head.value
+    actual = ll.head.value
+    expected = 1875
+    assert expected == actual
+
 
 
 @pytest.fixture
