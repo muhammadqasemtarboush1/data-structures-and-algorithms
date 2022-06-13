@@ -31,7 +31,6 @@ def test_insert(ll):
     assert expected == actual
 
 
-
 def test_include(ll):
     """
     Will return true when finding a value within the linked list that exists
@@ -63,6 +62,7 @@ def test_str(ll):
 
     assert actual == expected
 
+
 def test_insert_multiple(ll):
     """
   insert into the linked list
@@ -90,6 +90,55 @@ def test_insert_multiple(ll):
     assert expected == actual
 
 
+# Can successfully add a node to the end of the linked list
+def test_append(ll):
+    ll.append(55)
+    actual = ll.to_string()
+    expected = '{ 0 } ->{ 12 } ->{ 7 } ->{ 5 } ->{ 55 } -> NULL'
+    assert actual == expected
+
+
+# Can successfully add multiple nodes to the end of a linked list
+def test_append_multiple(ll):
+    ll.append(55)
+    ll.append(85)
+    ll.append(65)
+    actual = ll.to_string()
+    expected = '{ 0 } ->{ 12 } ->{ 7 } ->{ 5 } ->{ 55 } ->{ 85 } ->{ 65 } -> NULL'
+    assert actual == expected
+
+
+# Can successfully insert a node before the first node of a linked list
+def test_insert_before(linked_insert):
+    linked_insert.insert_before(1, 5)
+    actual = linked_insert.to_string()
+    expected = "{ 5 } ->{ 1 } ->{ 3 } ->{ 2 } -> NULL"
+    assert expected == actual
+
+
+# Can successfully insert a node before a node located i the middle of a linked list
+def test_insert_before_middle(linked_insert):
+    linked_insert.insert_before(3, 5)
+    actual = linked_insert.to_string()
+    expected = "{ 1 } ->{ 5 } ->{ 3 } ->{ 2 } -> NULL"
+    assert expected == actual
+
+
+# Can successfully insert after a node in the middle of the linked list
+def test_insert_after_middle_node(linked_insert):
+    linked_insert.insert_after(3, 5)
+    actual = linked_insert.to_string()
+    expected = "{ 1 } ->{ 3 } ->{ 5 } ->{ 2 } -> NULL"
+    assert expected == actual
+
+
+# Can successfully insert a node after the last node of the linked list
+def test_insert_after_last_node(linked_insert):
+    linked_insert.insert_after(2, 5)
+    actual = linked_insert.to_string()
+    expected = "{ 1 } ->{ 3 } ->{ 2 } ->{ 5 } -> NULL"
+    assert expected == actual
+
 
 @pytest.fixture
 def ll():
@@ -99,3 +148,12 @@ def ll():
     ll.insert(12)
     ll.insert(0)
     return ll
+
+
+@pytest.fixture
+def linked_insert():
+    newlink = LinkedList()
+    newlink.insert(2)
+    newlink.insert(3)
+    newlink.insert(1)
+    return newlink
