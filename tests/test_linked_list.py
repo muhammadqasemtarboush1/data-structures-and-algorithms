@@ -139,19 +139,47 @@ def test_insert_after_last_node(linked_insert):
     expected = "{ 1 } ->{ 3 } ->{ 2 } ->{ 5 } -> NULL"
     assert expected == actual
 
-def test_kth_in_lingth(ll):
-    pass
 
 def test_kth_in_lingth(ll):
     pass
 
-'''
-Where k is greater than the length of the linked list
-Where k and the length of the list are the same
-Where k is not a positive integer
-Where the linked list is of a size 1
-Happy Path” where k is not at the end, but somewhere in the middle of the linked list
-'''
+
+def test_kth_out_range(ll):
+    # Where k is greater than the length of the linked list
+    actual = ll.kth_form_end(11)
+    expected = 'Exception error value not found'
+    assert expected == actual
+
+
+def test_kth_in_range(ll):
+    # Where k and the length of the list are the same
+    actual = ll.kth_form_end(3)
+    print(ll.to_string())
+    print(ll.length)
+    expected = '0'
+    assert expected == str(actual)
+
+
+def test_kth_positive(ll):
+    # Where k is not a positive integer
+    actual = ll.kth_form_end(-1)
+    expected = 'Negative value not expected'
+    assert expected == actual
+
+
+def test_kth_size1(ll_size1):
+    # Where the linked list is of a size 1
+    actual = ll_size1.kth_form_end(0)
+    expected = "5"
+    assert expected == str(actual)
+
+
+def test_kth_in_middle(ll):
+    # Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+    actual = ll.kth_form_end(2)
+    expected = "12"
+    assert expected == str(actual)
+
 
 @pytest.fixture
 def ll():
@@ -170,3 +198,10 @@ def linked_insert():
     newlink.insert(3)
     newlink.insert(1)
     return newlink
+
+
+@pytest.fixture
+def ll_size1():
+    ll_size1 = LinkedList()
+    ll_size1.insert(5)
+    return ll_size1

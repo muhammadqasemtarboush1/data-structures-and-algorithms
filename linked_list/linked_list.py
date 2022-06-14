@@ -13,8 +13,10 @@ class LinkedList:
     def err_msg(self,err):
         if err == 1:
             return "No change, method exception"
-        else:
+        if err == 2:
             return "Exception error value not found"
+        else:
+            return "Negative value not expected"
 
     # Adds new node containing 'value' to the first node of the linked list.
     def insert(self, value):
@@ -104,10 +106,13 @@ class LinkedList:
         #     :param k:
         #     :return:Return the node’s value that is k places from the tail of the linked list.
         #     '''
+
             last_node = current = self.head
             counter = 0
             if self.length < k or self.length == 0:
                 return self.err_msg(2)
+            if k < 0:
+                return self.err_msg(3)
             while last_node:
                 if counter > k:
                     current = current.next
@@ -129,6 +134,6 @@ if __name__ == "__main__":
     ll.insert_after(12,66)
     ll.insert_before(12,68)
     ll.kth_form_end(1)
-    print(ll.to_string())
-    print(ll.kth_form_end(3))
+    # print(ll.to_string())
+    # print(ll.kth_form_end(3))
 
