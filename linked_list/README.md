@@ -13,6 +13,7 @@ A linked list is a linear data structure, in which the elements are not stored a
   - insert before
   - insert after
   - kth_form_end
+  - zip lists
 - Testing
 
 ## Approach & Efficiency
@@ -27,6 +28,7 @@ Time complexity:
  - insert after : (n)
  - insert before : (n)
  - kth_form_end : (n)
+ - zip_lists : (n)
 
 Space complexity:
  - insert: (n)
@@ -36,6 +38,8 @@ Space complexity:
  - insert after : (1)
  - insert before : (1)
  - kth_form_end (1)
+ - zip_lists : (1)
+
 
 ## Whiteboard Process
 * append 
@@ -46,6 +50,8 @@ Space complexity:
   * ![insert after](insert%20after.jpg)
 * kth_form_end: 
   * ![kth_form_end](Linked_kth.jpg)
+* zip_lists: 
+  * ![zip_lists](linked-list-zip.jpg)
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 > Insert:
@@ -79,3 +85,8 @@ value specified
 >> parameters: kth
 > 
 >> functionally: return the node value with the given kth 
+> 
+> Zip lists:
+>> parameters: 2 linked list
+> 
+>> functionally: return list1 merged with list2

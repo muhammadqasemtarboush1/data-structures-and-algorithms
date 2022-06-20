@@ -180,6 +180,10 @@ def test_kth_in_middle(ll):
     expected = "12"
     assert expected == str(actual)
 
+def test_zip_listes(ll_one, ll_two):
+    actual = ll_one.zip_lists(ll_one,ll_two).to_string()
+    expected = '{ 1 } ->{ 5 } ->{ 3 } ->{ 9 } ->{ 2 } ->{ 4 } -> NULL'
+    assert expected == actual
 
 @pytest.fixture
 def ll():
@@ -205,3 +209,20 @@ def ll_size1():
     ll_size1 = LinkedList()
     ll_size1.insert(5)
     return ll_size1
+
+
+@pytest.fixture
+def ll_one():
+    ll_one = LinkedList()
+    ll_one.insert(2)
+    ll_one.insert(3)
+    ll_one.insert(1)
+    return ll_one
+
+@pytest.fixture
+def ll_two():
+    ll_two = LinkedList()
+    ll_two.insert(4)
+    ll_two.insert(9)
+    ll_two.insert(5)
+    return ll_two
