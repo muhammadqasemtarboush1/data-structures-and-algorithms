@@ -1,6 +1,6 @@
 import pytest
 from linked_list.linked_list import Node, LinkedList
-
+from linked_list.zip_list import zip_lists
 
 #  instantiate an empty linked list
 def test_linked_list(ll):
@@ -181,7 +181,7 @@ def test_kth_in_middle(ll):
     assert expected == str(actual)
 
 def test_zip_listes(ll_one, ll_two):
-    actual = ll_one.zip_lists(ll_one,ll_two).to_string()
+    actual = zip_lists(ll_one,ll_two).to_string()
     expected = '{ 1 } ->{ 5 } ->{ 3 } ->{ 9 } ->{ 2 } ->{ 4 } -> NULL'
     assert expected == actual
 
