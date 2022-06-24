@@ -30,3 +30,15 @@ Declare function called zip_lists
     * change current second to next
     * next of previous2 will point to current first
     * change the next previous1 & previous1 to previous2
+
+
+> Testing:
+>   
+> Requirements: pytest
+> Run the following command in terminal:
+> 
+> pytest -v  / 23 passed  / to run all the testing files
+> 
+> or
+>  
+> pytest .\tests\test_zip_list.py / 3 passed  / zip list of tests tests only
