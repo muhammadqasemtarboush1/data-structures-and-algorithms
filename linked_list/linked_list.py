@@ -125,7 +125,6 @@ class LinkedList:
 
 
 
-
 if __name__ == "__main__":
 
     link_1 = LinkedList()
@@ -136,7 +135,5 @@ if __name__ == "__main__":
     link_2.insert(4)
     link_2.insert(9)
     link_2.insert(5)
-    # listvalue = link_1.zip_lists(link_1,link_2)
-    # print(listvalue.to_string())
 
 
