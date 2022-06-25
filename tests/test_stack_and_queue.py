@@ -46,8 +46,8 @@ def test_stack_peek(stack):
    Can successfully peek the next item on the stack
     '''
     actual = stack.peek()
-    expected = '24'
-    assert str(actual) == expected
+    expected = 24
+    assert actual == expected
 
 def test_stack_empty_stack():
     '''
@@ -72,9 +72,79 @@ def test_stack_empty_stack_pop():
 
 
 
+# Queue Testing
+
+def test_queue_can_enqueue(queue):
+    '''
+    Can successfully enqueue into a queue
+    '''
+    queue.enqueue(32)
+    actual = queue.__str__()
+    expected = '8 - 16 - 24 - 32 - '
+    assert actual == expected
+
+def test_queue_can_enqueue_multi(queue):
+    '''
+   Can successfully enqueue multiple values into a queue
+    '''
+    queue.enqueue(32)
+    queue.enqueue(40)
+    queue.enqueue(48)
+    actual = queue.__str__()
+    expected = '8 - 16 - 24 - 32 - 40 - 48 - '
+    assert actual == expected
+
+def test_queue_can_dequeue(queue):
+    '''
+   Can successfully dequeue out of a queue the expected value
+    '''
+    # queue.dequeue()
+    actual = queue.dequeue()
+    expected = 8
+    assert actual == expected
+
+def test_queue_can_peek(queue):
+    '''
+   Can successfully peek into a queue, seeing the expected value
+    '''
+    # queue.peek()
+    actual = queue.peek()
+    expected = 8
+    assert actual == expected
 
 
+def test_queue_can_is_empty_after_multiple_dequeue(queue):
+    '''
+   Can successfully empty a queue after multiple dequeues
+    '''
 
+    queue.dequeue()
+    queue.dequeue()
+    queue.dequeue()
+    actual = queue.is_empty()
+    expected = True
+    assert actual == expected
+
+
+def test_queue_can_init_empty_queue():
+    '''
+   Can successfully instantiate an empty queue
+    '''
+    new_queue = Queue()
+    actual = new_queue.is_empty()
+    expected = True
+    assert actual == expected
+
+def test_queue_can_raise_exceptions_on_empty():
+    '''
+   Calling dequeue or peek on empty queue raises exception
+    '''
+    new_queue = Queue()
+    # actual = new_stack.pop()
+    with pytest.raises(EmptyQueueException) as peek:
+        actual = new_queue.peek()
+    expected = 'Empty Queue'
+    assert str(peek.value) == expected
 
 
 @pytest.fixture
