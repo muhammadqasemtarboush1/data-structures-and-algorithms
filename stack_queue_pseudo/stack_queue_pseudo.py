@@ -21,16 +21,14 @@ class PseudoQueue:
         Extracts a value from the PseudoQueue, using a first-in, first-out approach.
        '''
         if self.pseudo_queue.is_empty():
-            print("emptyyyyyyyyyyyyyyyyyyyy")
             raise EmptyQueueException('Empty Queue')
-
         while not self.pseudo_queue.is_empty():
-            popped = self.pseudo_queue.pop()
-            self.pseudo_queue_2.push(popped)
+            pop_queue = self.pseudo_queue.pop()
+            self.pseudo_queue_2.push(pop_queue)
         dequed = self.pseudo_queue_2.pop()
         while not self.pseudo_queue_2.is_empty():
-            popped = self.pseudo_queue_2.pop()
-            self.pseudo_queue.push(popped)
+            pop_queue = self.pseudo_queue_2.pop()
+            self.pseudo_queue.push(pop_queue)
         return dequed
 
     def __str__(self):
@@ -50,4 +48,6 @@ if __name__ == '__main__':
     fake_queue.enqueue(3)
     fake_queue.enqueue(4)
     fake_queue.enqueue(20)
+    print(fake_queue.__str__())
+    print(fake_queue.pseudo_queue.pop())
     print(fake_queue.__str__())
