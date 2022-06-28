@@ -51,3 +51,4 @@ if __name__ == '__main__':
     print(fake_queue.__str__())
     print(fake_queue.pseudo_queue.pop())
     print(fake_queue.__str__())
+
