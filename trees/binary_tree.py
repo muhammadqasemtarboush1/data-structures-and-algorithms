@@ -10,49 +10,51 @@ class Node:
 
 class BinaryTree:
     def __init__(self):
+
         self.root = None
 
-    def default_action(self, value, arr=None):
+    def def_act(self, value, arr=None):
+
         arr = arr or []
         arr.append(value)
         return arr
 
-    def pre_order(self, node=None, action=None, acc=None):
-        action = action or self.default_action
+    def pre_order(self, node=None, temp_act=None, stored_value=None):
+        temp_act = temp_act or self.def_act
         if not self.root:
-            return action()
+            return temp_act()
         node = node or self.root
-        acc = action(node.value, acc)
+        stored_value = temp_act(node.value, stored_value)
         if node.left:
-            acc = self.pre_order(node.left, action, acc)
+            stored_value = self.pre_order(node.left, temp_act, stored_value)
         if node.right:
-            acc = self.pre_order(node.right, action, acc)
-        return acc
+            stored_value = self.pre_order(node.right, temp_act, stored_value)
+        return stored_value
 
-    def in_order(self, node=None, action=None, acc=None):
-        if action is None:
-            action = self.default_action
+    def post_order(self, node=None, temp_act=None, stored_value=None):
+        temp_act = temp_act or self.def_act
         if not self.root:
-            return action()
+            return temp_act()
         node = node or self.root
         if node.left:
-            acc = self.in_order(node.left, action, acc)
-        acc = action(node.value, acc)
+            stored_value = self.post_order(node.left, temp_act, stored_value)
         if node.right:
-            acc = self.in_order(node.right, action, acc)
-        return acc
+            stored_value = self.post_order(node.right, temp_act, stored_value)
+        stored_value = temp_act(node.value, stored_value)
+        return stored_value
 
-    def post_order(self, node=None, action=None, acc=None):
-        action = action or self.default_action
+    def in_order(self, node=None, temp_act=None, stored_value=None):
+        if temp_act is None:
+            temp_act = self.def_act
         if not self.root:
-            return action()
+            return temp_act()
         node = node or self.root
         if node.left:
-            acc = self.post_order(node.left, action, acc)
+            stored_value = self.in_order(node.left, temp_act, stored_value)
+        stored_value = temp_act(node.value, stored_value)
         if node.right:
-            acc = self.post_order(node.right, action, acc)
-        acc = action(node.value, acc)
-        return acc
+            stored_value = self.in_order(node.right, temp_act, stored_value)
+        return stored_value
 
 
 if __name__ == "__main__":
@@ -63,10 +65,6 @@ if __name__ == "__main__":
     tree.root.left.left = Node(30)
     tree.root.left.right = Node(40)
     tree.root.right.left = Node(60)
-    # print(tree.breadth_first())
     print(tree.pre_order())
     print(tree.in_order())
     print(tree.post_order())
-
-    # print("+++++++++++++++++")
-    # tree.pre_order_iter()
