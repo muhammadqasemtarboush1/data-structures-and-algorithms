@@ -45,14 +45,44 @@ def test_add_to_trees():
   assert binary_tree.root.value == 1
 
 # Can successfully return a collection from a preorder traversal
+def test_b_s_trees_preorder():
+  binary_tree=BinarySearchTree()
+  binary_tree.add(5)
+  binary_tree.add(9)
+  binary_tree.add(6)
+  assert binary_tree.pre_order() ==  [5, 9, 6]
 
 # Can successfully return a collection from an inorder traversal
+def test__b_s_trees_in_order():
+  binary_tree=BinarySearchTree()
+  binary_tree.add(5)
+  binary_tree.add(9)
+  binary_tree.add(6)
+  assert binary_tree.in_order() ==  [5, 6, 9]
 
 # Can successfully return a collection from a postorder traversal
+def test_b_s_trees_post_order():
+  binary_tree=BinarySearchTree()
+  binary_tree.add(5)
+  binary_tree.add(9)
+  binary_tree.add(6)
+  assert binary_tree.post_order() == [6, 9, 5]
 
 # Returns true	false for the contains method, given an existing
+def test_contain_true():
+  binary_tree=BinarySearchTree()
+  binary_tree.add(5)
+  binary_tree.add(9)
+  binary_tree.add(6)
+  assert binary_tree.contains(5) == True
 
 
+def test_contain_false():
+  binary_tree=BinarySearchTree()
+  binary_tree.add(5)
+  binary_tree.add(9)
+  binary_tree.add(6)
+  assert binary_tree.contains(55) == False
 
 
 @pytest.fixture
@@ -65,7 +95,3 @@ def tree():
     tree.root.left.right = Node(40)
     tree.root.right.left = Node(60)
     return tree
-
-# @pytest.fixture
-# def tree():
-#   return BinaryTree()
