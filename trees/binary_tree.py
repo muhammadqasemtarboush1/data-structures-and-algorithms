@@ -56,6 +56,47 @@ class BinaryTree:
             stored_value = self.in_order(node.right, temp_act, stored_value)
         return stored_value
 
+    def max_in_tree(self):
+        '''
+        deal with numeric values and return the max value
+        :return: max value in tree
+        '''
+
+        if not self.root:
+            return 'There is no item in this tree'
+        # max = self.root.value
+        tree = self.pre_order()
+        max = tree[0]
+        for i in tree:
+            if i > max:
+                max = i
+        return max
+
+    # while temp.value:
+    #     if max > temp.value:
+    #
+    #         if temp.value == max:
+    #             # return True
+    #             max = temp.value
+    #             print(max,'in first else')
+    #
+    #         else:
+    #             if not temp.right:
+    #                 return False
+    #             temp = temp.right
+    #             print(max,'in lasr else')
+    #
+    #     else:
+    #         if temp.value == max:
+    #             # return True
+    #             max = temp.value
+    #             print(max,'in lasr else')
+    #         # else:
+    #         #     # if not temp.left:
+    #         #     # return False
+    #             temp = temp.left
+    # return max
+
 
 if __name__ == "__main__":
     tree = BinaryTree()
@@ -64,7 +105,9 @@ if __name__ == "__main__":
     tree.root.right = Node(50)
     tree.root.left.left = Node(30)
     tree.root.left.right = Node(40)
+    # [10, 20, 30, 40, 50, 60]
     tree.root.right.left = Node(60)
     print(tree.pre_order())
     print(tree.in_order())
     print(tree.post_order())
+    print(tree.max_in_tree())
