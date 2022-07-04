@@ -61,14 +61,12 @@ class BinaryTree:
         deal with numeric values and return the max value
         :return: max value in tree
         '''
+
         if not self.root:
             return 'There is no item in this tree'
-        max = self.root.value
-        if self.root.value == max:
-            max = self.root.value
+        # max = self.root.value
         tree = self.pre_order()
         max = tree[0]
-
         for i in tree:
             if i > max:
                 max = i
