@@ -1,5 +1,5 @@
 from stack_and_queue.stack_and_queue import Queue
-
+from trees.b_s_f import breadth_first
 
 class Node:
     def __init__(self, value):
@@ -111,3 +111,4 @@ if __name__ == "__main__":
     print(tree.in_order())
     print(tree.post_order())
     print(tree.max_in_tree())
+    print(breadth_first(tree))
