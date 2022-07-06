@@ -1,5 +1,5 @@
-from stack_and_queue.stack_and_queue import Queue
-from trees.b_s_f import breadth_first
+from trees.helper_functions.b_s_f import breadth_first
+
 
 class Node:
     def __init__(self, value):
@@ -100,15 +100,29 @@ class BinaryTree:
 
 if __name__ == "__main__":
     tree = BinaryTree()
-    tree.root = Node(10)
-    tree.root.left = Node(20)
-    tree.root.right = Node(50)
-    tree.root.left.left = Node(30)
-    tree.root.left.right = Node(40)
-    # [10, 20, 30, 40, 50, 60]
-    tree.root.right.left = Node(60)
-    print(tree.pre_order())
-    print(tree.in_order())
-    print(tree.post_order())
-    print(tree.max_in_tree())
+    # tree.root = Node(10)
+    # tree.root.left = Node(20)
+    # tree.root.right = Node(50)
+    # tree.root.left.left = Node(30)
+    # tree.root.left.right = Node(40)
+    # # [10, 20, 30, 40, 50, 60]
+    # tree.root.right.left = Node(60)
+    # print(tree.pre_order())
+    # print(tree.in_order())
+    # print(tree.post_order())
+    # print(tree.max_in_tree())
+    # print(breadth_first(tree))
+# [2, 7, 5, 2, 6, 9, 5, 11, 4]
+    tree.root = Node(2)
+    # tree.root.left = Node(7)
+    # tree.root.right = Node(5)
+    # tree.root.left.left = Node(2)
+    # tree.root.left.right = Node(6)
+    # # [10, 20, 30, 40, 50, 60]
+    # tree.root.right.right = Node(9)
+    # tree.root.left.right.left = Node(5)
+    # tree.root.left.right.right = Node(11)
+    # tree.root.right.right.left = Node(4)
+
     print(breadth_first(tree))
+
