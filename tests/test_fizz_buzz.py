@@ -1,21 +1,20 @@
 import pytest
-# from stack_and_queue.stack_and_queue import Queue
 from trees.binary_tree import *
-from trees.helper_functions.b_f_s.b_s_f import *
+from trees.helper_functions.tree_fizz_buzz.tree_fizz_buzz import *
 
 
-def test_bsf(tree):
-    assert breadth_first(tree) == [10, 20, 50, 30, 40, 60]
+def test_f_b(tree):
+    assert fizz_buzz(tree) # some test
 
 
-def test_bsf_in_empty():
+def test_f_b_in_empty():
     tree = BinaryTree()
-    assert breadth_first(tree) == 'No root for this tree'
+    assert fizz_buzz(tree) == 'No root for this tree'
 
-def test_bsf_one_root():
+def test_f_b_one_root():
     tree = BinaryTree()
     tree.root = Node(5)
-    assert breadth_first(tree) == [5]
+    assert fizz_buzz(tree)# some test
 
 
 @pytest.fixture
