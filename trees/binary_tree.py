@@ -113,17 +113,17 @@ if __name__ == "__main__":
     # print(tree.max_in_tree())
     # print(breadth_first(tree))
 # [2, 7, 5, 2, 6, 9, 5, 11, 4]
-    tree.root = Node(2)
-    # tree.root.left = Node(7)
-    # tree.root.right = Node(5)
-    # tree.root.left.left = Node(2)
-    # tree.root.left.right = Node(6)
-    # # [10, 20, 30, 40, 50, 60]
-    # tree.root.right.right = Node(9)
-    # tree.root.left.right.left = Node(5)
-    # tree.root.left.right.right = Node(11)
-    # tree.root.right.right.left = Node(4)
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    tree.root.left.left = Node(4)
+    tree.root.left.right = Node(5)
+    # [10, 20, 30, 40, 50, 60]
+    tree.root.right.right = Node(6)
+    tree.root.left.right.left = Node(7)
+    tree.root.left.right.right = Node(8)
+    tree.root.right.right.left = Node(15)
 
     print(breadth_first(tree))
-    print(fizz_buzz_tree(tree))
+    print(fizz_buzz(tree))
 

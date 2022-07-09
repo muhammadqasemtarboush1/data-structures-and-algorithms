@@ -1,5 +1,5 @@
 from trees.binary_tree import *
-
+from trees.helper_functions.tree_fizz_buzz.tree_fizz_buzz import fizz_buzz
 
 class BinarySearchTree(BinaryTree):
     def add(self, value):
@@ -71,3 +71,4 @@ if __name__ == '__main__':
    print(tree.contains(1),'False 1')
    print(tree.contains(100000),'False 10000')
    print(tree.pre_order())
+   print(fizz_buzz(tree))
