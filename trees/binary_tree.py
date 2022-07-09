@@ -1,5 +1,5 @@
-from trees.helper_functions.b_s_f import breadth_first
-
+from trees.helper_functions.b_f_s.b_s_f import breadth_first
+from trees.helper_functions.tree_fizz_buzz.tree_fizz_buzz import *
 
 class Node:
     def __init__(self, value):
@@ -125,4 +125,5 @@ if __name__ == "__main__":
     # tree.root.right.right.left = Node(4)
 
     print(breadth_first(tree))
+    print(fizz_buzz_tree(tree))
 
