@@ -14,4 +14,6 @@
 |       8       | [Stack & Queue Animal-Shelter](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/stack_queue_animal_shelter/README.md) |
 |       9       | [stack-queue-brackets ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/stack_queue_brackets/README.md)              |
 |      10       | [ Trees ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/README.md)                                           |
-|      11       | [ Breadth First ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/helper_functions/README.md)                  |
+|      11       | [ Breadth First ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/helper_functions/b_f_s/README.md)            |
+|      12       | [ Tree Max ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/Max_README.md)                                    |
+|      13       | [ Tree Fizz Buzz ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/helper_functions/tree_fizz_buzz/README.md)  |

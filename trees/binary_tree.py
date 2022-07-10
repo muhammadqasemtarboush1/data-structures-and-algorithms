@@ -1,4 +1,3 @@
-from trees.helper_functions.b_f_s.b_s_f import breadth_first
 from trees.helper_functions.tree_fizz_buzz.tree_fizz_buzz import *
 
 class Node:
@@ -12,6 +11,21 @@ class BinaryTree:
     def __init__(self):
 
         self.root = None
+
+    def insert(self, value):
+        if self.value:
+            if value < self.value:
+                    if self.left is None:
+                        self.left = Node(value)
+                    else:
+                        self.left.insert(value)
+            elif value > self.value:
+                    if self.right is None:
+                        self.right = Node(value)
+                    else:
+                        self.right.insert(value)
+        else:
+            self.value = value
 
     def def_act(self, value, arr=None):
 
@@ -113,17 +127,18 @@ if __name__ == "__main__":
     # print(tree.max_in_tree())
     # print(breadth_first(tree))
 # [2, 7, 5, 2, 6, 9, 5, 11, 4]
-    tree.root = Node(2)
-    # tree.root.left = Node(7)
-    # tree.root.right = Node(5)
-    # tree.root.left.left = Node(2)
-    # tree.root.left.right = Node(6)
-    # # [10, 20, 30, 40, 50, 60]
-    # tree.root.right.right = Node(9)
-    # tree.root.left.right.left = Node(5)
-    # tree.root.left.right.right = Node(11)
-    # tree.root.right.right.left = Node(4)
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    tree.root.left.left = Node(4)
+    tree.root.left.right = Node(5)
+    # [10, 20, 30, 40, 50, 60]
+    tree.root.right.right = Node(6)
+    tree.root.left.right.left = Node(7)
+    tree.root.left.right.right = Node(8)
+    tree.root.right.right.left = Node(15)
 
     print(breadth_first(tree))
-    print(fizz_buzz_tree(tree))
-
+    test = fizz_buzz(tree)
+    print(test.pre_order())
+# ['1', '2', 'Fizz', '4', 'Buzz', '7', '8', 'Fizz', 'FizzBuzz']
