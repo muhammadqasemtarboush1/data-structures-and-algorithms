@@ -31,3 +31,11 @@ def fizz_buzz(tree):
                 queue.enqueue(i)
 
     return output
+
+
+'''
+another way to do fizz_buzz:
+by call the tree.breadth_first()
+and store it in variable rather than using queue and so on and loop over it and do the same logic 
+and slice the values from it
+'''

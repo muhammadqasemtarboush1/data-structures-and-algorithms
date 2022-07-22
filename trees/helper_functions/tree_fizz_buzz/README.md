@@ -26,7 +26,7 @@ fizz buzz rule replace it with "Fizz" or "Buzz" or "FizzBuzz"  and add it to the
 otherwise add the value to output array as string.
 
 
-[Code](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/helper_functions/tree_fizz_buzz/tree_fizz_buzz)
+[Code](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/helper_functions/tree_fizz_buzz/tree_fizz_buzz.py)
 
 
 > For testing
