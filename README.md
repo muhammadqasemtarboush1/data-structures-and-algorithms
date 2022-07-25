@@ -17,3 +17,4 @@
 |      11       | [ Breadth First ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/helper_functions/b_f_s/README.md)            |
 |      12       | [ Tree Max ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/Max_README.md)                                    |
 |      13       | [ Tree Fizz Buzz ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/trees/helper_functions/tree_fizz_buzz/README.md)  |
+|      14       | [ Insertion Sort ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/sorting/insertion/README.md)                      |
