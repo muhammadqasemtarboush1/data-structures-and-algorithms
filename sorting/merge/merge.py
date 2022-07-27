@@ -72,6 +72,11 @@ def merge_sort(arr):
         temp = merge(left, right, arr)
         return temp
 
+    elif n == 1:
+        return arr
+    else:
+        return 'please make sure you enter a valid array.'
+
 
 if __name__ == "__main__":
     print(merge_sort([8, 4, 23, 42, 16, 15]))
