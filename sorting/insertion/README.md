@@ -49,9 +49,11 @@ Space Complexity: O(1)
 > You Can run the test by the following command in the root directory:
 > 
 > pytest .\tests\test_insertion_sort.py // 4 passed
+> 
+> > or 
+> 
+> pytest -v 
 
-
-x
 
 
 
