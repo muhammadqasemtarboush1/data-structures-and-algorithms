@@ -41,7 +41,6 @@ def swap(arr, i, low):
 
 def partition(arr, left, right):
     pivot = arr[right]
-    print(pivot, 'pivot')
     low = left - 1
     # i = left
     # while left < right:
