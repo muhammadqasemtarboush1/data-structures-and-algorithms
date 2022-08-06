@@ -20,3 +20,4 @@
 |      14       | [ Insertion Sort ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/sorting/insertion/README.md)                      |
 |      15       | [ Merge Sort ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/sorting/merge/README.md)                              |
 |      16       | [ Quick Sort ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/sorting/quick/README.md)                              |
+|      17       | [ Hash Table ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/hashtable/README.md)                                  |
