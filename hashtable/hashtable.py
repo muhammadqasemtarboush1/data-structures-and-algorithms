@@ -1,8 +1,8 @@
-# from hashtable.linked_list import *
 class Node:
     """
     Helper class to create node
     """
+
     def __init__(self, value, next=None):
         """
         Takes two arguments: value =>* , next=> node
@@ -10,6 +10,7 @@ class Node:
         """
         self.value = value
         self.next = next
+
 
 class LinkedList:
     """
@@ -36,6 +37,7 @@ class LinkedList:
         node.next = self.head
         self.head = node
 
+
 class HashTable:
     """
     HashTable class will have multiple methods, set, get,
@@ -44,7 +46,7 @@ class HashTable:
     data to provide easy and fast access to its items.
     """
 
-    def __init__(self, size=104):
+    def __init__(self, size=10):
         """
         Takes one arguments:
         1. size: int
@@ -85,12 +87,17 @@ class HashTable:
         """
         hashed_key = self.__hash(key)
         ll = self.__buckets[hashed_key]
-        current = ll.head
-        while current:
-            if current.value[0] == key:
-                return current.value[1]
-            current = current.next
-        return None
+
+        if ll:
+            current = ll.head
+
+            while current:
+                if current.value[0] == key:
+                    return current.value[1]
+                current = current.next
+            return None
+        else:
+            return None
 
     def contains(self, key):
         """
@@ -124,7 +131,8 @@ if __name__ == '__main__':
     hashq.set('muhammmad kases', 'fewewfwfwef')
     hashq.set('muhammmad hweeh', 'ew')
     hashq.set('muhammmad', '2w')
+    print(hashq._HashTable__buckets)
     # acutal = hashq.contains('muhammmad')
-    acutal = hashq.get('muhammmad')
+    acutal = hashq.get('muhammad')
     # acutal = hashq.key()
     print(acutal)
