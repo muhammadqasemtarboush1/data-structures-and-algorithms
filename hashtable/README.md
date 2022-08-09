@@ -27,6 +27,25 @@ Implement a Hashtable Class with the following methods:
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 Single-responsibility principle and chaining approach to resolve collisions using Linked list
 
+- Time Complexity:
+  - set: O(1)
+  - get: O(1)
+  - contains:O(1)
+  - key:O(1)
+  - hash:O(1)
+
+All the above is in best and  in average case but in  worst case they are O(n)
+
+- Space Complexity:
+  - set:O(k+ n)
+  - get:O(k + n)
+  - contains:O(k+ n)
+  - key:O(n)
+    - hash:O(k+n)
+    - 
+K is the size of the hashmap and n number of items they are in.
+  - item: nodes from the linked_list not in the hash table
+
 ## API
 
 <!-- Description of each method publicly available in each of your hashtable -->
