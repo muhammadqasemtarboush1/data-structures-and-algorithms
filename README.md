@@ -23,3 +23,4 @@
 |      17       | [ Hash Table ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/hashtable/README.md)                                  |
 |      18       | [ Hashmap-Repeated-Word ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/hashtable/repeated_word/README.md)         |
 |      19       | [ Hashmap-tree-intersection ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/hashtable/tree_intersection/README.md) |
+|      20       | [ Hashmap-left-join ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/hashtable/hashmap_left_join/README.md)         |
