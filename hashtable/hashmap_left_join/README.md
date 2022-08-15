@@ -18,3 +18,34 @@ Return: The returned data structure that holds the results is up to you. It does
 
 ## Solution
 <!-- Embedded whiteboard image -->
+### Algorithm:
+declare new function that takes 2 hashmap
+
+store the keys of the first hashmap in variable
+
+declare new dictionary
+
+iterate over the array 
+
+check if the second hash contains the keys of the first hash:
+
+if yes: Do stor the key and the value of it and get the list of values from the first and second hashmaps 
+
+if not stor the key and the value of the first hashmap and get the rest and replace the second hash values with No_match
+
+return the dictionary
+
+[ Code](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/hashtable/hashmap_left_join/README.md) 
+
+[Test ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/tests/test_hashmap_left_join.py)         
+
+
+> For testing
+>
+> you can run :
+>
+> pytest -v
+
+
+
+
