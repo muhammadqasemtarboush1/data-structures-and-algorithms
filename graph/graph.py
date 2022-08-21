@@ -62,7 +62,9 @@ class Graph:
         if end_vertex not in self.__adj_list:
             raise KeyError("End vertex is not found")
         edge1 = Edge(end_vertex, weight)
+        edge2 = Edge(start_vertex, weight)
         self.__adj_list[start_vertex].append(edge1)
+        self.__adj_list[end_vertex].append(edge2)
 
     def get_nodes(self):
         """
@@ -101,18 +103,18 @@ class Graph:
         visted = set()
         q = Queue()
         q.enqueue(start_vertex)
-        visted.add(start_vertex.value)
-        result.append(start_vertex.value)
+        visted.add(start_vertex)
 
         while len(q):
             current_vertex = q.dequeue()
-            if current_vertex != start_vertex:
-                result.append(current_vertex)
-            neighbors = self.get_neighbors(current_vertex)
-            for neighbor in neighbors:
+            # if current_vertex != start_vertex:
+            result.append(current_vertex.value)
+            neighbors = self.__adj_list.get(current_vertex)
+            for edge in neighbors:
+                neighbor = edge.vertex
                 if neighbor not in visted:
-                    q.enqueue(neighbor[0])
-                    visted.add(neighbor[0])
+                    q.enqueue(neighbor)
+                    visted.add(neighbor)
         return result
 
 
@@ -120,17 +122,15 @@ if __name__ == "__main__":
     g = Graph()
     a = g.add_node('A')
     b = g.add_node('B')
-    # e = g.add_node('E')
+    e = g.add_node('E')
     c = g.add_node('C')
-    # d = g.add_node('D')
+    d = g.add_node('D')
+    k = g.add_node('K')
     g.add_edge(a, b)
-    g.add_edge(b, a)
-    # g.add_edge(a, e)
-    # g.add_edge(e, a)
-    g.add_edge(a, c)
-    # g.add_edge(b, d)
-    # g.add_edge(b, e)
-    # g.add_edge(e, d)
-    # g.add_edge(e, c)
+    g.add_edge(b, d)
+    g.add_edge(c, d)
+    g.add_edge(e, d)
+    g.add_edge(c, k)
 
-    print(g.breadth_first(c))
+
+    print(g.breadth_first(a))

@@ -10,12 +10,13 @@ Write the following method for the Graph class:
 * Display the collection
 
 ### Whiteboard
-![]()
+![breadth_first.jpg](breadth_first.jpg)
 ### Approach & Efficiency
 Using queue to comparing and storing the vertices value and set to make it as flag for visited values 
 
 #### Efficiency:
 Time complexity:O(n^2)
+
 Space complexity:O(n)
 
 ### Solution

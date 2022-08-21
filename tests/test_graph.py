@@ -13,8 +13,8 @@ def test_edge_add():
     aa = gg.add_node('A')
     ba = gg.add_node('B')
     gg.add_edge(aa, ba)
-    gg.add_edge(ba, aa)
-    assert gg.get_neighbors(ba) == [{0, 'A'}]
+    # gg.add_edge(ba, aa)
+    assert gg.get_neighbors(ba) == [('A', 0)]
 
 
 # A collection of all nodes can be properly retrieved from the graph
@@ -24,7 +24,7 @@ def test_get_nodes(gr_data):
 
 # Neighbors are returned with the weight between nodes included
 def test_get_neighbors(gr_data):
-    assert gr_data[0].get_neighbors(gr_data[1]) == [{0, 'B'}, {0, 'E'}, {0, 'C'}]
+    assert gr_data[0].get_neighbors(gr_data[1]) == [('B', 0), ('E', 0), ('C', 0)]
 
 
 # The proper size is returned, representing the number of nodes in the graph
@@ -41,12 +41,9 @@ def gr_data():
     c = g.add_node('C')
     d = g.add_node('D')
     g.add_edge(a, b)
-    g.add_edge(b, a)
     g.add_edge(a, e)
-    g.add_edge(e, a)
     g.add_edge(a, c)
     g.add_edge(b, d)
-    g.add_edge(b, e)
     g.add_edge(e, d)
     g.add_edge(e, c)
     return (g, a)
