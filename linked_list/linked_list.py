@@ -137,3 +137,50 @@ if __name__ == "__main__":
     link_2.insert(5)
 
 
+
+
+# def rev_linked_list(ll):
+#     # ----------------------------------------------
+#     # correct Solution
+#     # ----------------------------------------------
+#     # pre = None
+#     # cur = ll.head
+#     # next = None
+#     # while cur is not None:
+#     #     next = cur.next
+#     #     cur.next = pre
+#     #     pre = cur
+#     #     cur = next
+#     # ll.head = pre
+#     # return ll
+#     # ----------------------------------------------
+#     # Errrrrrrrrrrrrrrrrrrrrrrorrrrrrrrrrrrrrrrrrrrrr
+#     # ----------------------------------------------
+#
+#     if ll.head:
+#         prv = ll.head
+#         prv.next = None
+#         cur = ll.head
+#         next = cur.next
+#         while cur is not None:
+#             cur = next
+#             next = cur.next
+#             cur.next = prv
+#             prv = cur
+#
+#         return ll
+#     else:
+#         return "can't reverse empty linked list"
+#
+#
+# if __name__ == "__main__":
+#     link_1 = LinkedList()
+#     # link_1.insert(2)
+#     link_1.insert(5)
+#     link_1.append(10)
+#     link_1.append(15)
+#     link_1.append(20)
+#
+#     print (link_1.to_string())
+#     x = rev_linked_list(link_1)
+#     print(x.to_string(), "reverse link")
