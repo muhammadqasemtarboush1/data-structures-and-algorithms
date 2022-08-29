@@ -143,16 +143,16 @@ if __name__ == "__main__":
 #     # ----------------------------------------------
 #     # correct Solution
 #     # ----------------------------------------------
-#     # pre = None
-#     # cur = ll.head
-#     # next = None
-#     # while cur is not None:
-#     #     next = cur.next
-#     #     cur.next = pre
-#     #     pre = cur
-#     #     cur = next
-#     # ll.head = pre
-#     # return ll
+    # pre = None
+    # cur = ll.head
+    # next = None
+    # while cur is not None:
+    #     next = cur.next
+    #     cur.next = pre
+    #     pre = cur
+    #     cur = next
+    # ll.head = pre
+    # return ll
 #     # ----------------------------------------------
 #     # Errrrrrrrrrrrrrrrrrrrrrrorrrrrrrrrrrrrrrrrrrrrr
 #     # ----------------------------------------------

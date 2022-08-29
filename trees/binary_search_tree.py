@@ -36,7 +36,6 @@ class BinarySearchTree(BinaryTree):
                 return True
             while temp:
                 if value > temp.value:
-
                     if temp.value == value:
                         return True
                     else:
