@@ -27,3 +27,4 @@
 |      21       | [ Graph ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/graph/README.md)                                           |
 |      22       | [ Graph-BFS ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/graph/bfs.md)                                          |
 |      23       | [ Lab 36 ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/whiteboard_lab_36/README.md)                              |
+|      23       | [ Graph Depth First ](https://github.com/muhammadqasemtarboush1/data-structures-and-algorithms/blob/main/graph_depth_first/README.md)                   |
